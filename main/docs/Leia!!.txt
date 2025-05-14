@@ -1,1 +1,0 @@
-Arquivo para o diretório não ser deletado no GitHub, apague após preencher o diretório.
