@@ -3,12 +3,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 :root {
-  --tamanho-header: 80px;
+  --tamanho-header: 100px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
@@ -23,18 +22,29 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  border-bottom: 2px solid #ffffff;
+  background-color: #2942c0;
 }
 
 .header .container {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  
+}
+
+.header .container img{
+  height: 90px;
+}
+
+.header .container li{
+  color: #ffffff;
 }
 
 .header a {
   text-decoration: none;
-  color: #e3b062;
+  height: 50px;
+  color: #ffffff;
 }
 
 .agora {
@@ -46,6 +56,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 100px;
   list-style: none;
   color: #e3b062;
 }
@@ -65,76 +76,172 @@ body {
 .banner {
   height: var(--tamanho-banner);
   color: white;
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-color: #2942c0;
   background-size: cover;
 }
 
 .banner .container {
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  align-items:  center;
+  flex-direction: column;
+  height: 40%;
+  text-align: center;
 }
 
 .banner .container p {
   width: 50%;
-  margin: 0;
+  margin-top: 10px;
   padding: 0;
-  font-size: 36px;
+  font-size: 30px;
+
 }
 
-.banner .container span {
-  font-weight: 800;
+.banner .container img{
+  height: 150px;
+  margin-top: 50px;
 }
 
-/* MISSÃO VISÃO VALORES */
+/*iniciativa*/
 
-.social {
-  background-color: #e5e5e5;
+.iniciativa .container{
+  width: 100%;
+  height: 600px;
+ 
+}
+
+.iniciativa .container .texto {
+  width: 40%;
+  margin-left: 80px;
+  font-size: 18px;
+
   display: flex;
-}
-
-.social .container {
+  flex-direction: column;
   justify-content: center;
 }
 
-.box img {
-  width: 170px;
-}
+.iniciativa .container .imagem {
+  width: 40%;
+  height: 100%;
+  margin-left: 100px;
 
-.social .container .boxes {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 30px 0;
-}
-
-.social p {
-  text-align: center;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
+.iniciativa .container .imagem img{
+  height: 400px;
+}
+
+.iniciativa .container .texto button{
+  background-color: #2942c0;
+  height: 60px;
+  width: 120px;
+  color: #ffffff;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.iniciativa .container .texto button:hover{
+  border-color: #269e46;
+  text-decoration: underline; 
+}
+
+
 /* FOOTER */
 
-.footer {
-  background-color: #32b9cd;
-  height: 150px;
-  color: #fff;
+.footer .container{
+  height: 100%;
+  width: 100%;
+  background-color: #2942c0;
+  color: #ffffff;
+  border-top: solid 25px #269e46;
+
   display: flex;
-  font-size: 15px;
+  align-items: center;
+  justify-content: space-around;
+  
 }
 
-.footer .container {
+.icon-footer{
+  height: 90px;
+}
+
+.footer .container .links{
+  display: flex;
   justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+
+  height: 80%;
 }
 
-.footer .container .version {
-  font-size: 12px;
+.footer .container .link a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer .container .link{
+  margin: 0px 0px 0px 0px;
+}
+
+.footer .container .link li{ 
+  list-style-type: none;
+}
+
+.titulo-footer{
+  margin: 0px 8px 10px 0px;
+  font-weight: bold;
+}
+
+.footer .container .contatos a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer .container .contatos li{ 
+  list-style-type: none;
+}
+
+.footer .container .contatos{ 
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.footer .container .contato p{
+  margin: 10px 10px 0px 0px;
+}
+
+.footer .container .contato{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  min-height: 150px;
+  width: auto;
+}
+
+.footer .container .contato h2{
+  align-self: self-start;
+  margin: 10px 0px 0px 0px;
+}
+
+.sociais {
+  display: flex;
+  
+  
+  flex-direction: row;
+
+  width: 100%;
+  height: 5px;
+}
+
+.icon-social{
+  margin: 0px 10px 0px 0px 0px;
+  align-self: self-start;
+  height: 30px;
 }
 
 /* LOGIN */
