@@ -22,7 +22,7 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 4px solid #269e46;
   background-color: #2942c0;
 }
 
