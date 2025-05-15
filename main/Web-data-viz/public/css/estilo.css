@@ -8,10 +8,6 @@ body {
 
 :root {
   --tamanho-header: 100px;
-  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-footer: 65px;
 }
 
 .container {
@@ -74,7 +70,7 @@ body {
 /* BANNER */
 
 .banner {
-  height: var(--tamanho-banner);
+  height: 550px;
   color: white;
   background-color: #2942c0;
   background-size: cover;
@@ -244,6 +240,109 @@ body {
   height: 30px;
 }
 
+/*banner sobre-nos*/
+
+.banner-sobrenos {
+  height: 130px;
+  background-color: #2942c0;
+  color: #ffffff;
+}
+
+.banner-sobrenos .container{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sobre nós sptech */
+
+.sptech{
+  height: 600px;
+}
+
+.sptech .container{
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sptech .container img{
+  height: 300px;
+}
+
+/* sobre nos quizfutebol */
+
+.quizfutebol .container{
+  width: 100%;
+  height: 550px;
+  background-color: #2942c0;
+ 
+}
+
+.quizfutebol .container .texto {
+  width: 40%;
+  margin-left: 80px;
+  font-size: 18px;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quizfutebol .container .imagem {
+  width: 40%;
+  height: 100%;
+  margin-left: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quizfutebol .container .imagem img{
+  height: 400px;
+}
+
+/* sobre nos minha história */
+
+.miguel {
+  height: 500px;
+}
+
+.miguel .container {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.miguel .container .imagem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.miguel .container .imagem img{
+  height: 300px;
+  border-radius: 360px;
+}
+
+.miguel .container .texto{
+  width: 50%;
+  font-size: 18px;
+}
 /* LOGIN */
 
 .login {
