@@ -1,2 +1,2 @@
-# Projeto-Individual
+# QuizFutebol
 Repositório para o meu projeto individual.
