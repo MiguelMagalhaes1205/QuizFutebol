@@ -343,11 +343,13 @@ body {
   width: 50%;
   font-size: 18px;
 }
+
+
 /* LOGIN */
 
 .login {
-  height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  height: 600px;
+  background-image: url('../assets/imgs/fundo_login_cadastro.png');
   background-size: cover;
 }
 
@@ -359,20 +361,20 @@ body {
 
 .card {
   width: 50%;
-  background-color: #e5e5e5;
-  border-radius: 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: palevioletred;
+  color: #2942c0;
   flex-direction: column;
   height: fit-content;
   padding: 20px 0;
 }
 
-.card h2 {
+.card img {
   margin: 0;
-  font-size: 30px;
+  height: 80px;
 }
 
 .formulario {
@@ -389,14 +391,14 @@ body {
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
+  border: 2px solid #269e46;
   text-align: center;
   border-radius: 10px;
   margin: 0;
 }
 
 .formulario select {
-  border: 2px solid #32b9cd;
+  border: 2px solid #269e46;
   background-color: white;
   color: gray;
   height: 36px;
@@ -414,17 +416,22 @@ body {
 
 .botao {
   cursor: pointer;
-  font-family: "Barlow", sans-serif;
-  border: 0;
-  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 3px solid transparent;
+  border-radius: 10px;
   font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-  background-color: #ED145B;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2942c0;
   width: 120px;
   height: 30px;
   align-self: center;
   margin-top: 20px;
+}
+
+.botao:hover {
+  border-color: #269e46;
+  text-decoration: underline; 
 }
 
 .loading-div {
@@ -507,6 +514,10 @@ input {
   height: 50px;
   width: 50px;
 }
+
+/* CADASTRO */
+
+
 
 /* SIMULADOR */
 

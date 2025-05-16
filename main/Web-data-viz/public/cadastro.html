@@ -13,7 +13,18 @@
   <link rel="stylesheet" href="./css/estilo.css" />
   <link rel="icon" href="assets/icon/logoico.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
+
 </head>
+<style>
+
+  .img-escudo {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+</style>
 
 <body onload="listar()">
   <!--header inicio-->
@@ -48,15 +59,12 @@
     <div class="container">
       <div class="card card-cadastro">
         <h2>Bem-vindo!</h2>
+        <img src="assets/imgs/QuizFutebol_horizontal_preto copy.png" alt="QuizFutebol_horizontal_preto">
         <div class="formulario">
           <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
                      -->
-          <div class="campo">
-            <span>Código de ativação:</span>
-            <input id="codigo_input" type="text" placeholder="Insira aqui seu código" />
-          </div>
           <div class="campo">
             <span>Nome:</span>
             <input id="nome_input" type="text" placeholder="Seu nome" />
@@ -72,6 +80,131 @@
           <div class="campo">
             <span>Confirmação da Senha:</span>
             <input id="confirmacao_senha_input" type="password" placeholder="******" />
+          </div>
+          <div class="campo">
+            <span>Seu time de futebol favorito:</span>
+              <select id="time" width="300px">
+                <option value="">Escolha o seu time de futebol favorito:</option>
+                <optgroup label="Acre">
+                  <option value="Plácido de Castro">Plácido de Castro</option>
+                  <option value="Rio Branco">Rio Branco</option>
+                  <option value="São Francisco">São Francisco</option>
+                  <option value="Vasco da Gama">Vasco da Gama</option>
+                </optgroup>
+                <optgroup label="Alagoas">
+                  <option value="CRB">CRB</option>
+                  <option value="CSA">CSA</option>
+                </optgroup>
+                <optgroup label="Amapá">
+                  <option value="Ypiranga">Ypiranga</option>
+                </optgroup>
+                <optgroup label="Amazonas">
+                  <option value="Manaus">Manaus</option>
+                  <option value="Nacional">Nacional</option>
+                </optgroup>
+                <optgroup label="Bahia">
+                  <option value="Bahia">Bahia</option>
+                  <option value="Vitória">Vitória</option>
+                </optgroup>
+                <optgroup label="Ceará">
+                  <option value="Ceará">Ceará</option>
+                  <option value="Fortaleza">Fortaleza</option>
+                  <option value="Criciúma">Criciúma</option>
+                </optgroup>
+                <optgroup label="Distrito Federal">
+                  <option value="Brasília">Brasília</option>
+                </optgroup>
+                <optgroup label="Espírito Santo">
+                  <option value="Vitória">Vitória</option>
+                </optgroup>
+                <optgroup label="Goiás">
+                  <option value="Goiás">Goiás</option>
+                  <option value="Atlético Goianiense">Atlético Goianiense</option>
+                  <option value="Vila Nova">Vila Nova</option>
+                </optgroup>
+                <optgroup label="Maranhão">
+                  <option value="Sampaio Corrêa">Sampaio Corrêa</option>
+                </optgroup>
+                <optgroup label="Mato Grosso">
+                  <option value="Cuiabá">Cuiabá</option>
+                </optgroup>
+                <optgroup label="Mato Grosso do Sul">
+                  <option value="Operário MS">Operário MS</option>
+                </optgroup>
+                <optgroup label="Minas Gerais">
+                  <option value="Atlético Mineiro">Atlético Mineiro</option>
+                  <option value="Cruzeiro">Cruzeiro</option>
+                  <option value="América Mineiro">América Mineiro</option>
+                </optgroup>
+                <optgroup label="Pará">
+                  <option value="Paysandu">Paysandu</option>
+                  <option value="Remo">Remo</option>
+                </optgroup>
+                <optgroup label="Paraíba">
+                  <option value="Botafogo PB">Botafogo PB</option>
+                  <option value="Campinense">Campinense</option>
+                </optgroup>
+                <optgroup label="Paraná">
+                  <option value="Atlético Paranaense">Atlético Paranaense</option>
+                  <option value="Coritiba">Coritiba</option>
+                  <option value="Londrina">Londrina</option>
+                  <option value="Operário Ferroviário">Operário Ferroviário</option>
+                </optgroup>
+                <optgroup label="Pernambuco">
+                  <option value="Sport">Sport</option>
+                  <option value="Náutico">Náutico</option>
+                  <option value="Santa Cruz">Santa Cruz</option>
+                </optgroup>
+                <optgroup label="Piauí">
+                  <option value="Altos">Altos</option>
+                </optgroup>
+                <optgroup label="Rio de Janeiro">
+                  <option value="Flamengo">Flamengo</option>
+                  <option value="Fluminense">Fluminense</option>
+                  <option value="Vasco da Gama">Vasco da Gama</option>
+                  <option value="Botafogo">Botafogo</option>
+                </optgroup>
+                <optgroup label="Rio Grande do Norte">
+                  <option value="ABC">ABC</option>
+                  <option value="América RN">América RN</option>
+                </optgroup>
+                <optgroup label="Rio Grande do Sul">
+                  <option value="Grêmio">Grêmio</option>
+                  <option value="Internacional">Internacional</option>
+                </optgroup>
+                <optgroup label="Rondônia">
+                  <option value="Ji-Paraná">Ji-Paraná</option>
+                  <option value="Genus">Genus</option>
+                </optgroup>
+                <optgroup label="Roraima">
+                  <option value="Baré">Baré</option>
+                </optgroup>
+                <optgroup label="Santa Catarina">
+                  <option value="Avaí">Avaí</option>
+                  <option value="Chapecoense">Chapecoense</option>
+                  <option value="Figueirense">Figueirense</option>
+                  <option value="Joinville">Joinville</option>
+                </optgroup>
+                <optgroup label="São Paulo">
+                  <option value="São Paulo">São Paulo</option>
+                  <option value="Palmeiras">Palmeiras</option>
+                  <option value="Santos">Santos</option>
+                  <option value="Corinthians">Corinthians</option>
+                  <option value="São Bernardo">São Bernardo</option>
+                  <option value="Guarani">Guarani</option>
+                  <option value="Ponte Preta">Ponte Preta</option>
+                  <option value="Mirassol">Mirassol</option>
+                  <option value="Novorizontino">Novorizontino</option>
+                  <option value="Ituano">Ituano</option>
+                </optgroup>
+                <optgroup label="Sergipe">
+                  <option value="Confiança">Confiança</option>
+                  <option value="Ferroviário">Ferroviário</option>
+                </optgroup>
+                <optgroup label="Tocantins">
+                  <option value="Palmas">Palmas</option>
+                </optgroup>
+              </select>
           </div>
           <button class="botao" onclick="cadastrar()">Cadastrar</button>
         </div>
@@ -144,7 +277,7 @@
 
 </html>
 
-<script>
+<script> 
 
   // Array para armazenar empresas cadastradas para validação de código de ativação 
   let listaEmpresasCadastradas = [];
