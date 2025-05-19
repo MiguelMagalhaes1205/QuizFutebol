@@ -83,13 +83,12 @@
           </div>
           <div class="campo">
             <span>Seu time de futebol favorito:</span>
-              <select id="time" width="300px">
+              <select id="sel_time">
                 <option value="">Escolha o seu time de futebol favorito:</option>
                 <optgroup label="Acre">
                   <option value="Plácido de Castro">Plácido de Castro</option>
                   <option value="Rio Branco">Rio Branco</option>
                   <option value="São Francisco">São Francisco</option>
-                  <option value="Vasco da Gama">Vasco da Gama</option>
                 </optgroup>
                 <optgroup label="Alagoas">
                   <option value="CRB">CRB</option>
@@ -99,6 +98,7 @@
                   <option value="Ypiranga">Ypiranga</option>
                 </optgroup>
                 <optgroup label="Amazonas">
+                  <option value="Amazonas">Amazonas</option>
                   <option value="Manaus">Manaus</option>
                   <option value="Nacional">Nacional</option>
                 </optgroup>
@@ -113,9 +113,10 @@
                 </optgroup>
                 <optgroup label="Distrito Federal">
                   <option value="Brasília">Brasília</option>
+                  <option value="Gama">Gama</option>
                 </optgroup>
                 <optgroup label="Espírito Santo">
-                  <option value="Vitória">Vitória</option>
+                  <option value="Vitória-ES">Vitória-ES</option>
                 </optgroup>
                 <optgroup label="Goiás">
                   <option value="Goiás">Goiás</option>
@@ -279,8 +280,6 @@
 
 <script> 
 
-  // Array para armazenar empresas cadastradas para validação de código de ativação 
-  let listaEmpresasCadastradas = [];
 
   function cadastrar() {
     // aguardar();
@@ -291,7 +290,7 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var codigoVar = codigo_input.value;
+    var timefavorito = sel_time.value;
     var idEmpresaVincular
 
     // Verificando se há algum campo em branco
@@ -300,7 +299,7 @@
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
-      codigoVar == ""
+      timefavorito == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -312,18 +311,6 @@
       setInterval(sumirMensagem, 5000);
     }
 
-    // Verificando se o código de ativação é de alguma empresa cadastrada
-    for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-      if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-        idEmpresaVincular = listaEmpresasCadastradas[i].id
-        console.log("Código de ativação válido.");
-        break;
-      } else {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-        finalizarAguardar();
-      }
-    }
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
@@ -337,7 +324,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        idEmpresaVincularServer: idEmpresaVincular
+        timefavoritoServer: timefavorito
       }),
     })
       .then(function (resposta) {

@@ -6,7 +6,8 @@ create table usuario(
 	idUsuario int primary key auto_increment,
     nome varchar(200),
 	email varchar(200),
-    senha varchar(50)
+    senha varchar(50),
+    timefavorito varchar(40)
 );
 
 create table quizzes(
