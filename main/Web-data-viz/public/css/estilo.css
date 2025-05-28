@@ -29,7 +29,10 @@ body {
   
 }
 
-.header .container img{
+.logout{
+  height: 30px;
+}
+.titulo{
   height: 90px;
 }
 
@@ -515,10 +518,6 @@ input {
   width: 50px;
 }
 
-/* CADASTRO */
-
-
-
 /* SIMULADOR */
 
 .simulador {
@@ -529,6 +528,80 @@ input {
   flex-direction: column;
   overflow: scroll; 
   height: var(--tamanho-simulador);
+}
+
+/* QUIZZES */
+
+.banner-quizzes {
+  height: 250px;
+  color: white;
+  background-color: #2942c0;
+  background-size: cover;
+}
+
+.banner-quizzes .container {
+  justify-content: center;
+  align-items:  center;
+  flex-direction: column;
+  height: 80%;
+  text-align: center;
+}
+
+.banner-quizzes .container p {
+  width: 50%;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 30px;
+
+}
+
+.banner-quizzes .container img{
+  height: 80px;
+  margin-top: 50px;
+}
+
+.listaquizzes{
+  height: 800px;
+  width: 70%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: black;
+    margin: 6px 0;
+}
+
+.card button {
+    background-color: #2942c0;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: black;
 }
 
 /* ALERTA */
