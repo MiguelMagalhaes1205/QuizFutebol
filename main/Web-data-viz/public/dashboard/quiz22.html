@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QuizFutebol | Brasileirão</title>
+    <title>QuizFutebol | Champions League</title>
 
     <script src="./js/sessao.js"></script>
 
@@ -37,10 +37,10 @@
       </div>
     </div>
 
-    <div class="banner-quizzes">
+    <div class="banner-quizzes">    
       <div class="container">
         <img src="../assets/imgs/QuizFutebol_horizontal_branco copy.png" alt="QuizFutebol_horizontal_branco">
-        <p>Quiz sobre o Brasileirão</p>
+        <p>Quiz sobre a Champions League</p>
       </div>
     </div>
 
@@ -101,8 +101,8 @@
                         <button onclick="avancar()" id="btnProx" disabled class="botoes">Avançar para próxima questão</button>
                         <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
                         <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled class="botoes">Tentar novamente</button>
+                        
                     </div>
-        
                 </div>
         </div>
     </div>
@@ -167,98 +167,97 @@
   <script>
     const listaDeQuestoes = [
 
-{
-    pergunta: "Qual foi o primeiro clube a conquistar o Campeonato Brasileiro de forma invicta?",
-    alternativaA: "Internacional (1979)",
-    alternativaB: "São Paulo (1977)",
-    alternativaC: "Fluminense (1984)",
-    alternativaD: "Cruzeiro (2003)",
-    alternativaCorreta: "alternativaA"
-},
+    {
+        pergunta: "Qual foi o clube que conquistou a Champions League na temporada 1998-1999 com dois gols nos acréscimos?",
+        alternativaA: "Liverpool",
+        alternativaB: "Manchester United",
+        alternativaC: "Real Madrid",
+        alternativaD: "Chelsea",
+        alternativaCorreta: "alternativaB"
+    },
 
-{
-    pergunta: "Qual jogador detém o recorde de mais gols marcados em uma única edição do Campeonato Brasileiro (até 2025)?",
-    alternativaA: "Gabigol (2019)",
-    alternativaB: "Zico (1980)",
-    alternativaC: "Washington 'Coração Valente' (2004)",
-    alternativaD: "Edmundo (1997)",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Quantos títulos de Champions League Zinedine Zidane conquistou como técnico do Real Madrid de forma consecutiva?",
+        alternativaA: "2",
+        alternativaB: "3",
+        alternativaC: "4",
+        alternativaD: "5",
+        alternativaCorreta: "alternativaB"
+    },
 
-{
-    pergunta: "Qual foi o primeiro clube nordestino a chegar em uma semifinal de Campeonato Brasileiro?",
-    alternativaA: "Sport",
-    alternativaB: "Bahia",
-    alternativaC: "Náutico",
-    alternativaD: "Santa Cruz",
-    alternativaCorreta: "alternativaA"
-},
+    {
+        pergunta: "Na histórica final de 2005, conhecida como 'O Milagre de Istambul', qual foi o placar do primeiro tempo entre Milan e Liverpool?",
+        alternativaA: "1x0 para o Milan",
+        alternativaB: "3x0 para o Milan",
+        alternativaC: "2x0 para o Liverpool",
+        alternativaD: "1x1",
+        alternativaCorreta: "alternativaB"
+    },
 
-{
-    pergunta: "Qual treinador tem mais títulos do Campeonato Brasileiro na história até 2025?",
-    alternativaA: "Muricy Ramalho",
-    alternativaB: "Tele Santana",
-    alternativaC: "Luxemburgo",
-    alternativaD: "Luiz Felipe Scolari",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Qual jogador detém o recorde de mais gols marcados em uma única edição da Champions League?",
+        alternativaA: "Robert Lewandowski",
+        alternativaB: "Lionel Messi",
+        alternativaC: "Cristiano Ronaldo",
+        alternativaD: "Karim Benzema",
+        alternativaCorreta: "alternativaC"
+    },
 
-{
-    pergunta: "Em que ano o Campeonato Brasileiro foi disputado pela primeira vez no formato de pontos corridos?",
-    alternativaA: "2001",
-    alternativaB: "2002",
-    alternativaC: "2003",
-    alternativaD: "2004",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Em qual estádio foi disputada a primeira final da Champions League no formato de grupos (temporada 1992-93)?",
+        alternativaA: "Wembley (Inglaterra)",
+        alternativaB: "Stadio Olimpico (Roma)",
+        alternativaC: "Olympiastadion (Munique)",
+        alternativaD: "Olympic Stadium (Atenas)",
+        alternativaCorreta: "alternativaD"
+    },
 
-{
-    pergunta: "Qual jogador foi artilheiro do Brasileirão em três décadas diferentes (anos 80, 90 e 2000)?",
-    alternativaA: "Romário",
-    alternativaB: "Edmundo",
-    alternativaC: "Túlio Maravilha",
-    alternativaD: "Luizão",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Qual é o único clube a conquistar a Champions League de forma perfeita (ganhando 100% dos jogos)?",
+        alternativaA: "Bayern (2019-20)",
+        alternativaB: "Milan (1993-94)",
+        alternativaC: "Arsenal (2005-06)",
+        alternativaD: "Liverpool (1983-84)",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Qual clube detém a maior sequência de vitórias consecutivas na história do Brasileirão (até 2025)?",
-    alternativaA: "Cruzeiro (2003)",
-    alternativaB: "Coritiba (2011)",
-    alternativaC: "Palmeiras (2022)",
-    alternativaD: "Flamengo (2019)",
-    alternativaCorreta: "alternativaB"
-},
+    {
+        pergunta: "O que aconteceu de curioso na semifinal entre Real Madrid e Borussia Dortmund em 2013?",
+        alternativaA: "Lewandowski fez 4 gols em um único jogo",
+        alternativaB: "O jogo foi interrompido por uma invasão de gatos",
+        alternativaC: "O Borussia jogou com 9 jogadores e venceu",
+        alternativaD: "O árbitro esqueceu de levar os cartões",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Em 1987, no imbróglio do 'Clube dos 13', qual time venceu a chamada Copa União – Módulo Verde?",
-    alternativaA: "Internacional",
-    alternativaB: "Vasco",
-    alternativaC: "Flamengo",
-    alternativaD: "Sport",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Qual foi o primeiro clube a vencer a Champions League sem perder nenhum jogo fora de casa desde a fase de grupos até a final?",
+        alternativaA: "Barcelona (2008-09)",
+        alternativaB: "Ajax (1994-95)",
+        alternativaC: "Manchester United (1998-99)",
+        alternativaD: "Porto (2003-04)",
+        alternativaCorreta: "alternativaB"
+    },
 
-{
-    pergunta: "Qual foi o clube rebaixado com a maior pontuação na era dos pontos corridos (até 2025)?",
-    alternativaA: "Internacional (2016)",
-    alternativaB: "Fluminense (1997)",
-    alternativaC: "Coritiba (2009)",
-    alternativaD: "Figueirense (2008)",
-    alternativaCorreta: "alternativaA"
-},
+    {
+        pergunta: "Qual é o clube que mais vezes perdeu finais da Champions League?",
+        alternativaA: "Juventus",
+        alternativaB: "Atlético de Madrid",
+        alternativaC: "Bayern de Munique",
+        alternativaD: "Benfica",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Em 2020, quem foi eleito o craque do Campeonato Brasileiro pela CBF?",
-    alternativaA: "Gabigol",
-    alternativaB: "Claudinho",
-    alternativaC: "Marinho",
-    alternativaD: "Arrascaeta",
-    alternativaCorreta: "alternativaB"
-}
+    {
+        pergunta: "Qual desses jogadores nunca venceu uma Champions League, apesar de ter sido uma estrela mundial?",
+        alternativaA: "Gianluigi Buffon",
+        alternativaB: "Steven Gerrard",
+        alternativaC: "Ronaldinho Gaúcho",
+        alternativaD: "Rivaldo",
+        alternativaCorreta: "alternativaA"
+    }
+
 ];
-
-
 
     // variáveis globais    
     let numeroDaQuestaoAtual = 0

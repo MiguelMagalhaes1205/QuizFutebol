@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QuizFutebol | Brasileirão</title>
+    <title>QuizFutebol | Manchester United</title>
 
     <script src="./js/sessao.js"></script>
 
@@ -37,10 +37,10 @@
       </div>
     </div>
 
-    <div class="banner-quizzes">
+    <div class="banner-quizzes">    
       <div class="container">
         <img src="../assets/imgs/QuizFutebol_horizontal_branco copy.png" alt="QuizFutebol_horizontal_branco">
-        <p>Quiz sobre o Brasileirão</p>
+        <p>Quiz sobre o Manchester United</p>
       </div>
     </div>
 
@@ -101,8 +101,8 @@
                         <button onclick="avancar()" id="btnProx" disabled class="botoes">Avançar para próxima questão</button>
                         <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
                         <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled class="botoes">Tentar novamente</button>
+                        
                     </div>
-        
                 </div>
         </div>
     </div>
@@ -167,98 +167,97 @@
   <script>
     const listaDeQuestoes = [
 
-{
-    pergunta: "Qual foi o primeiro clube a conquistar o Campeonato Brasileiro de forma invicta?",
-    alternativaA: "Internacional (1979)",
-    alternativaB: "São Paulo (1977)",
-    alternativaC: "Fluminense (1984)",
-    alternativaD: "Cruzeiro (2003)",
-    alternativaCorreta: "alternativaA"
-},
+    {
+        pergunta: "Em que ano o Manchester United foi fundado?",
+        alternativaA: "1878",
+        alternativaB: "1882",
+        alternativaC: "1876",
+        alternativaD: "1890",
+        alternativaCorreta: "alternativaB"
+    },
 
-{
-    pergunta: "Qual jogador detém o recorde de mais gols marcados em uma única edição do Campeonato Brasileiro (até 2025)?",
-    alternativaA: "Gabigol (2019)",
-    alternativaB: "Zico (1980)",
-    alternativaC: "Washington 'Coração Valente' (2004)",
-    alternativaD: "Edmundo (1997)",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Qual era o nome original do Manchester United quando foi fundado?",
+        alternativaA: "Newton Heath LYR Football Club",
+        alternativaB: "Manchester FC",
+        alternativaC: "United FC",
+        alternativaD: "Lancashire Wanderers",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Qual foi o primeiro clube nordestino a chegar em uma semifinal de Campeonato Brasileiro?",
-    alternativaA: "Sport",
-    alternativaB: "Bahia",
-    alternativaC: "Náutico",
-    alternativaD: "Santa Cruz",
-    alternativaCorreta: "alternativaA"
-},
+    {
+        pergunta: "Quantos títulos da Premier League o Manchester United conquistou até 2024?",
+        alternativaA: "13",
+        alternativaB: "15",
+        alternativaC: "20",
+        alternativaD: "21",
+        alternativaCorreta: "alternativaC"
+    },
 
-{
-    pergunta: "Qual treinador tem mais títulos do Campeonato Brasileiro na história até 2025?",
-    alternativaA: "Muricy Ramalho",
-    alternativaB: "Tele Santana",
-    alternativaC: "Luxemburgo",
-    alternativaD: "Luiz Felipe Scolari",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Quem foi o técnico do Manchester United durante a era dos 'Treble' (triplete) em 1999?",
+        alternativaA: "Alex Ferguson",
+        alternativaB: "José Mourinho",
+        alternativaC: "Ron Atkinson",
+        alternativaD: "Louis van Gaal",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Em que ano o Campeonato Brasileiro foi disputado pela primeira vez no formato de pontos corridos?",
-    alternativaA: "2001",
-    alternativaB: "2002",
-    alternativaC: "2003",
-    alternativaD: "2004",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Qual estádio é a casa do Manchester United?",
+        alternativaA: "Old Trafford",
+        alternativaB: "Etihad Stadium",
+        alternativaC: "Anfield",
+        alternativaD: "Stamford Bridge",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Qual jogador foi artilheiro do Brasileirão em três décadas diferentes (anos 80, 90 e 2000)?",
-    alternativaA: "Romário",
-    alternativaB: "Edmundo",
-    alternativaC: "Túlio Maravilha",
-    alternativaD: "Luizão",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Quem é o maior artilheiro da história do Manchester United?",
+        alternativaA: "Denis Law",
+        alternativaB: "Wayne Rooney",
+        alternativaC: "Bobby Charlton",
+        alternativaD: "George Best",
+        alternativaCorreta: "alternativaB"
+    },
 
-{
-    pergunta: "Qual clube detém a maior sequência de vitórias consecutivas na história do Brasileirão (até 2025)?",
-    alternativaA: "Cruzeiro (2003)",
-    alternativaB: "Coritiba (2011)",
-    alternativaC: "Palmeiras (2022)",
-    alternativaD: "Flamengo (2019)",
-    alternativaCorreta: "alternativaB"
-},
+    {
+        pergunta: "Qual jogador famoso do Manchester United ficou conhecido como 'Fergie Time' por marcar gols decisivos nos acréscimos?",
+        alternativaA: "Ryan Giggs",
+        alternativaB: "Paul Scholes",
+        alternativaC: "Ole Gunnar Solskjær",
+        alternativaD: "Cristiano Ronaldo",
+        alternativaCorreta: "alternativaC"
+    },
 
-{
-    pergunta: "Em 1987, no imbróglio do 'Clube dos 13', qual time venceu a chamada Copa União – Módulo Verde?",
-    alternativaA: "Internacional",
-    alternativaB: "Vasco",
-    alternativaC: "Flamengo",
-    alternativaD: "Sport",
-    alternativaCorreta: "alternativaC"
-},
+    {
+        pergunta: "Em que ano o Manchester United conquistou a sua primeira Champions League?",
+        alternativaA: "1968",
+        alternativaB: "1999",
+        alternativaC: "2008",
+        alternativaD: "2013",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Qual foi o clube rebaixado com a maior pontuação na era dos pontos corridos (até 2025)?",
-    alternativaA: "Internacional (2016)",
-    alternativaB: "Fluminense (1997)",
-    alternativaC: "Coritiba (2009)",
-    alternativaD: "Figueirense (2008)",
-    alternativaCorreta: "alternativaA"
-},
+    {
+        pergunta: "Qual jogador do Manchester United foi eleito melhor do mundo pela FIFA em 2008?",
+        alternativaA: "Cristiano Ronaldo",
+        alternativaB: "Wayne Rooney",
+        alternativaC: "Paul Scholes",
+        alternativaD: "Rio Ferdinand",
+        alternativaCorreta: "alternativaA"
+    },
 
-{
-    pergunta: "Em 2020, quem foi eleito o craque do Campeonato Brasileiro pela CBF?",
-    alternativaA: "Gabigol",
-    alternativaB: "Claudinho",
-    alternativaC: "Marinho",
-    alternativaD: "Arrascaeta",
-    alternativaCorreta: "alternativaB"
-}
+    {
+        pergunta: "Quem foi o capitão do Manchester United durante o famoso título da Premier League em 1999?",
+        alternativaA: "Roy Keane",
+        alternativaB: "Gary Neville",
+        alternativaC: "Steve Bruce",
+        alternativaD: "Bryan Robson",
+        alternativaCorreta: "alternativaA"
+    }
+
 ];
-
-
 
     // variáveis globais    
     let numeroDaQuestaoAtual = 0
