@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizFutebol | Lazio</title>
+
+    <script src="./js/sessao.js"></script>
+
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" href="../assets/icon/logoico.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body onload="onloadEsconder()">
+    <div class="header">
+      <div class="container">
+        <img src="../assets/imgs/QuizFutebol_horizontal_branco copy.png" alt="QuizFutebol_horizontal_branco" class="titulo">
+        <ul class="navbar">
+          <li>
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+          <li>|</li>
+          <li class="agora">
+            <a href="quizzes.html">Quizzes</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="../index.html">
+                <img src="../assets/imgs/icon-logout.png" alt="Sair" class="logout">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="banner-quizzes">    
+      <div class="container">
+        <img src="../assets/imgs/QuizFutebol_horizontal_branco copy.png" alt="QuizFutebol_horizontal_branco">
+        <p>Quiz sobre a Lazio</p>
+      </div>
+    </div>
+
+    <div class="quiz"> 
+            <div id="pontuacaoEJogo" class="jogo">
+                <button id="btnIniciarQuiz" onclick="iniciarQuiz()" class="iniciar">INICIAR QUIZ</button>
+                <a href="quizzes.html"><button class="iniciar">Voltar para Quizzes</button></a>
+        
+                <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+                    <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
+                        <span class="width-fit-content">Quantidade de acertos: <span id="spanCertas"></span></span>
+                        <span class="width-fit-content">Quantidade de erros: <span id="spanErradas"></span></span>
+                    </div>
+                    <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
+                        <span id="pontuacaoFinal" class="width-fit-content">Pontuação Final:
+                            <span id="spanPontuacaoFinal">***</span>
+                        </span>
+                        <span id="msgFinal" class="width-fit-content">***</span>
+                    </div>
+                </div>
+        
+                <div id="jogo" class="width-fit-content flex-colunar border-secondary">
+        
+                    <div id="infoQuestao" class="padding-8">
+                        <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
+                            questões.</span>
+                    </div>
+        
+                    <div id="perguntaDaQuestaoAtual" class="padding-8">
+                        <span id="spanQuestaoExibida" class="text-bold"></span>
+                    </div>
+        
+                    <div id="infoAlternativas" class="padding-8">
+                        <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                    </div>
+        
+                    <div id="opcoes" class="flex-colunar padding-8">
+                        <span>
+                            <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                            <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                            <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                            <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                            <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                        </span>
+                    </div>
+        
+                    <div id="botoes" class="flex-colunar padding-8">
+                        <button onclick="submeter()" id="btnSubmeter" class="botoes">Submeter resposta</button>
+                        <button onclick="avancar()" id="btnProx" disabled class="botoes">Avançar para próxima questão</button>
+                        <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
+                        <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled class="botoes">Tentar novamente</button>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+  
+            <img class="icon-footer" src="../assets/imgs/QuizFutebol_horizontal_branco copy.png" alt="Logo VitAgro">
+  
+            <div class="links">
+              <p class="titulo-footer">Páginas do site</p>
+              <ul class="link">
+                <li>
+                  <a href="index.html">Página Inicial
+                  </a>
+                </li>
+                <li>
+                  <a href="sobrenos.html">Sobre Nós</a>
+                </li>
+                <li>
+                  <a href="login.html">Página de Login</a>
+                </li>
+                <li>
+                  <a href="cadastro.html">Página de Cadastro</a>
+                </li>
+              </ul>
+            </div>
+  
+  
+              <div class="contato">
+                <h2 class="titulo-contato">Contato:</h2>
+                <ul class="contatos">
+                  <li>
+                    <p>Email: QuizFutebol@sptech.school</p>
+                  </li>
+                  <li>
+                    <p>Localização: Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001</p>
+                  </li>
+                  <li class="sociais">
+                    <p>Redes Sociais:<p>
+                        <a href="#">
+                            <img class="icon-social" src="../assets/imgs/facebook.png" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img class="icon-social" src="../assets/imgs/linkedin.png" alt="linkedin">
+                        </a>
+                        <a href="#">
+                            <img class="icon-social" src="../assets/imgs/instagram.png" alt="instagram">
+                        </a>
+                        <a href="#">
+                            <img class="icon-social" src="../assets/imgs/twitter.png" alt="twitter">
+                        </a>
+                  </li>
+                </ul>
+              </div>
+  
+        </div>
+      </div>
+  
+  </body>
+  </html>
+  <script>
+    const listaDeQuestoes = [
+
+{
+  pergunta: "Em que ano foi fundada oficialmente a Società Sportiva Lazio?",
+  alternativaA: "1899",
+  alternativaB: "1900",
+  alternativaC: "1901",
+  alternativaD: "1905",
+  alternativaCorreta: "alternativaB"
+},
+
+{
+  pergunta: "Quantos títulos da Serie A (Scudetto) a Lazio conquistou até 2025?",
+  alternativaA: "1",
+  alternativaB: "2",
+  alternativaC: "3",
+  alternativaD: "4",
+  alternativaCorreta: "alternativaB"
+},
+
+{
+  pergunta: "Qual jogador é o maior artilheiro da história da Lazio?",
+  alternativaA: "Silvio Piola",
+  alternativaB: "Giuseppe Signori",
+  alternativaC: "Ciro Immobile",
+  alternativaD: "Giorgio Chinaglia",
+  alternativaCorreta: "alternativaC"
+},
+
+{
+  pergunta: "Quem é o jogador com mais partidas disputadas pela Lazio?",
+  alternativaA: "Giuseppe Favalli",
+  alternativaB: "Stefan Radu",
+  alternativaC: "Senad Lulić",
+  alternativaD: "Paolo Negro",
+  alternativaCorreta: "alternativaB"
+},
+
+{
+  pergunta: "Qual é o nome do estádio onde a Lazio manda seus jogos?",
+  alternativaA: "Stadio Olimpico",
+  alternativaB: "Stadio Flaminio",
+  alternativaC: "Stadio Artemio Franchi",
+  alternativaD: "Stadio San Paolo",
+  alternativaCorreta: "alternativaA"
+},
+
+{
+  pergunta: "Quantas vezes a Lazio venceu a Coppa Italia até 2025?",
+  alternativaA: "5",
+  alternativaB: "6",
+  alternativaC: "7",
+  alternativaD: "8",
+  alternativaCorreta: "alternativaC"
+},
+
+{
+  pergunta: "Qual título europeu a Lazio conquistou na temporada 1998–99?",
+  alternativaA: "UEFA Champions League",
+  alternativaB: "UEFA Cup Winners' Cup",
+  alternativaC: "UEFA Europa League",
+  alternativaD: "UEFA Super Cup",
+  alternativaCorreta: "alternativaB"
+},
+
+{
+  pergunta: "Qual é o principal rival da Lazio no 'Derby della Capitale'?",
+  alternativaA: "Juventus",
+  alternativaB: "AC Milan",
+  alternativaC: "Internazionale",
+  alternativaD: "AS Roma",
+  alternativaCorreta: "alternativaD"
+},
+
+{
+  pergunta: "Qual jogador marcou o gol da vitória na final da Coppa Italia de 2013 contra a Roma?",
+  alternativaA: "Ciro Immobile",
+  alternativaB: "Senad Lulić",
+  alternativaC: "Felipe Anderson",
+  alternativaD: "Lucas Leiva",
+  alternativaCorreta: "alternativaB"
+},
+
+{
+  pergunta: "Qual treinador levou a Lazio ao título da Serie A na temporada 1999–2000?",
+  alternativaA: "Sven-Göran Eriksson",
+  alternativaB: "Roberto Mancini",
+  alternativaC: "Delio Rossi",
+  alternativaD: "Simone Inzaghi",
+  alternativaCorreta: "alternativaA"
+}
+
+];
+
+    // variáveis globais    
+    let numeroDaQuestaoAtual = 0
+    let pontuacaoFinal = 0
+    let tentativaIncorreta = 0
+    let certas = 0
+    let erradas = 0
+    let quantidadeDeQuestoes = listaDeQuestoes.length
+    // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
+
+    function onloadEsconder() {
+        document.getElementById('pontuacao').style.display = "none"
+        document.getElementById('jogo').style.display = "none"
+    }
+
+    function iniciarQuiz() {
+        document.getElementById('pontuacao').style.display = "flex"
+        document.getElementById('jogo').style.display = "flex"
+        document.getElementById('btnIniciarQuiz').style.display = "none"
+
+        document.getElementById('qtdQuestoes').innerHTML = quantidadeDeQuestoes
+
+        preencherHTMLcomQuestaoAtual(0)
+
+        btnSubmeter.disabled = false
+        btnProx.disabled = true
+        // btnConcluir.disabled = true
+        btnTentarNovamente.disabled = true
+    }
+
+    function preencherHTMLcomQuestaoAtual(index) {
+        habilitarAlternativas(true)
+        const questaoAtual = listaDeQuestoes[index]
+        numeroDaQuestaoAtual = index
+        console.log("questaoAtual")
+        console.log(questaoAtual)
+        document.getElementById("spanNumeroDaQuestaoAtual").innerHTML = Number(index) + 1 // ajustando porque o index começa em 0
+        document.getElementById("spanQuestaoExibida").innerHTML = questaoAtual.pergunta;
+        document.getElementById("labelOpcaoUm").innerHTML = questaoAtual.alternativaA;
+        document.getElementById("labelOpcaoDois").innerHTML = questaoAtual.alternativaB;
+        document.getElementById("labelOpcaoTres").innerHTML = questaoAtual.alternativaC;
+        document.getElementById("labelOpcaoQuatro").innerHTML = questaoAtual.alternativaD;
+    }
+
+    function submeter() {
+        const options = document.getElementsByName("option"); // recupera alternativas no html
+
+        let hasChecked = false
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                hasChecked = true
+                break
+            }
+        }
+
+        if (!hasChecked) {
+            alert("Não há alternativas escolhidas. Escolha uma opção.")
+        } else {
+            btnSubmeter.disabled = true
+            btnProx.disabled = false
+
+            habilitarAlternativas(false)
+
+            checarResposta()
+        }
+    }
+
+    function habilitarAlternativas(trueOrFalse) {
+        let opcaoEscolhida = trueOrFalse ? false : true
+
+        primeiraOpcao.disabled = opcaoEscolhida
+        segundaOpcao.disabled = opcaoEscolhida
+        terceiraOpcao.disabled = opcaoEscolhida
+        quartaOpcao.disabled = opcaoEscolhida
+
+    }
+
+    function avancar() {
+        btnProx.disabled = true
+        btnSubmeter.disabled = false
+
+        desmarcarRadioButtons()
+
+        if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
+            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+        } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
+            alert("Atenção... a próxima é a ultima questão!")
+            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
+        } else {
+            finalizarJogo()
+        }
+        limparCoresBackgroundOpcoes()
+    }
+
+    function tentarNovamente() {
+        // atualiza a página
+        window.location.reload()
+    }
+
+    function checarResposta() {
+        const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual] // questão atual 
+        const respostaQuestaoAtual = questaoAtual.alternativaCorreta // qual é a resposta correta da questão atual
+
+        const options = document.getElementsByName("option"); // recupera alternativas no html
+
+        let alternativaCorreta = null // variável para armazenar a alternativa correta
+
+        options.forEach((option) => {
+            if (option.value === respostaQuestaoAtual) {
+                console.log("alternativaCorreta está no componente: " + alternativaCorreta)
+                alternativaCorreta = option.labels[0].id
+            }
+        })
+
+        // verifica se resposta assinalada é correta
+        options.forEach((option) => {
+            if (option.checked === true && option.value === respostaQuestaoAtual) {
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                pontuacaoFinal++
+                certas++
+                document.getElementById("spanCertas").innerHTML = certas
+                numeroDaQuestaoAtual++
+            } else if (option.checked && option.value !== respostaQuestaoAtual) {
+                const wrongLabelId = option.labels[0].id
+
+                document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
+                document.getElementById(alternativaCorreta).classList.add("text-success-with-bg")
+                tentativaIncorreta++
+                erradas++
+                document.getElementById("spanErradas").innerHTML = erradas
+                numeroDaQuestaoAtual++
+            }
+        })
+    }
+
+    function limparCoresBackgroundOpcoes() {
+        const options = document.getElementsByName("option");
+        options.forEach((option) => {
+            document.getElementById(option.labels[0].id).classList.remove("text-danger-with-bg")
+            document.getElementById(option.labels[0].id).classList.remove("text-success-with-bg")
+        })
+    }
+
+    function desmarcarRadioButtons() {
+        const options = document.getElementsByName("option");
+        for (let i = 0; i < options.length; i++) {
+            options[i].checked = false;
+        }
+    }
+
+    function finalizarJogo() {
+        let textoParaMensagemFinal = null
+        let classComCoresParaMensagemFinal = null
+        const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
+
+        if (porcentagemFinalDeAcertos <= 0.3) {
+            textoParaMensagemFinal = "Parece que você não viu futebol o suficiente..."
+            classComCoresParaMensagemFinal = "text-danger-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
+            textoParaMensagemFinal = "Pode melhorar na próxima, hein!"
+            classComCoresParaMensagemFinal = "text-warning-with-bg"
+        }
+        else if (porcentagemFinalDeAcertos >= 0.9) {
+            textoParaMensagemFinal = "Uau, parabéns!"
+            classComCoresParaMensagemFinal = "text-success-with-bg"
+        }
+
+        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos)*100) + "% das questões."
+
+
+        document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
+        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal) 
+        document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
+
+        document.getElementById('jogo').classList.add("text-new-gray") 
+
+        btnProx.disabled = true
+        btnSubmeter.disabled = true
+        // btnConcluir.disabled = true
+        btnTentarNovamente.disabled = false
+
+    }
+</script>
