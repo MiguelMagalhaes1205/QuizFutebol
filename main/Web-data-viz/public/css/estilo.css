@@ -596,6 +596,7 @@ input {
     padding: 20px;
     margin: 15px;
     width: 280px;
+    height: 200px;
     text-align: center;
     transition: transform 0.3s;
 }
@@ -708,6 +709,12 @@ input {
   border-color: #269e46;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.tituloquizzes {
+  display: flex;
+  justify-content: center;
+  
 }
 
 
