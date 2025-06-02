@@ -589,7 +589,7 @@ input {
   width: 90%;
 }
 
-.card {
+.card-quizzes {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -601,21 +601,21 @@ input {
     transition: transform 0.3s;
 }
 
-.card:hover {
+.card-quizzes:hover {
     transform: scale(1.05);
 }
 
-.card h2 {
+.card-quizzes h2 {
     color: black;
     margin-bottom: 10px;
 }
 
-.card p {
+.card-quizzes p {
     color: black;
     margin: 6px 0;
 }
 
-.card button {
+.card-quizzes button {
     background-color: #2942c0;
     color: white;
     border: none;
@@ -625,7 +625,7 @@ input {
     transition: background-color 0.3s;
 }
 
-.card button:hover {
+.card-quizzes button:hover {
     background-color: black;
 }
 
@@ -715,6 +715,22 @@ input {
   display: flex;
   justify-content: center;
   
+}
+
+/* DASHBOARD */
+
+.banner-dashboard{
+  height: 100px;
+  background-color: #2942c0;
+}
+
+.banner-dashboard h3{
+  margin: 0px 0px 0px 0px;
+  color: #ffffff;
+}
+
+.conteudo-dashboard{
+  height: 500px;
 }
 
 
