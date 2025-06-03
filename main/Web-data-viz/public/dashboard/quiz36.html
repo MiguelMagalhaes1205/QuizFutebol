@@ -440,5 +440,36 @@
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
 
+        enviarResultadosParaBanco();
+
+    }
+
+    function enviarResultadosParaBanco(){
+      const idUsuario = sessionStorage.getItem("ID_USUARIO");
+
+      const dados = {
+        fkUsuario: parseInt(idUsuario),
+        fkQuizzes: 38,
+        quantidadeAcertos : pontuacaoFinal
+      };
+
+      fetch("http://localhost:3333/resultados/registrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+      })
+      .then(res => {
+        if(res.ok){
+          console.log("Resultado salvo no banco!")
+        } else {
+          console.error("Erro ao salvar resultado.")
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Erro na requisição.")
+      });
     }
 </script>
