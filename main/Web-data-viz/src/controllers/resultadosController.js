@@ -19,20 +19,6 @@ function registrar(req, res){
     }
 }
 
-function listarPorUsuario(req, res){
-    var fkUsuario = req.params.fkUsuario;
-
-    resultadosModel.listarPorUsuario(fkUsuario)
-        .then((resultado) => {
-            res.status(200).json(resultado);
-        })
-        .catch((erro) => {
-            console.log(erro);
-            res.status(500).json(erro.sqlMessage)
-        })
-}
-
 module.exports = {
-    registrar,
-    listarPorUsuario
+    registrar
 }
