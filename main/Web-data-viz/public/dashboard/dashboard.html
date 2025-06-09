@@ -66,19 +66,19 @@
                 <div class="parametros-conhecimento">
                     <div class="item-regua bagre">
                         <p>Bagre de Ouro 🎣</p>
-                        <p>>0%</p>
+                        <p>>=0%</p>
                     </div>
                     <div class="item-regua melhorar">
                         <p>Precisa Melhorar 😠</p>
-                        <p>>30%</p>
+                        <p>>=30%</p>
                     </div>
                     <div class="item-regua media">
                         <p>Tá na Média 😐</p>
-                        <p>>50%</p>
+                        <p>>=50%</p>
                     </div>
                     <div class="item-regua acima-media">
                         <p>Acima da Média 👏</p>
-                        <p>>80%</p>
+                        <p>>=80%</p>
                     </div>
                     <div class="item-regua deus-do-futebol">
                         <p>GOAT do Futebol 🐐</p>
@@ -263,11 +263,11 @@
 
     if(porcentagem == 100){
       legenda = 'GOAT do Futebol 🐐'
-    } else if (porcentagem < 100 && porcentagem > 80){
+    } else if (porcentagem < 100 && porcentagem >= 80){
       legenda = 'Acima da Média 👏'
-    } else if (porcentagem < 80 && porcentagem > 50){
+    } else if (porcentagem < 80 && porcentagem >= 50){
       legenda = 'Tá na Média 😐'
-    } else if (porcentagem < 50 && porcentagem > 30){
+    } else if (porcentagem < 50 && porcentagem >= 30){
       legenda = 'Precisa Melhorar 😠'
     } else if (porcentagem < 30){
       legenda = 'Bagre de Ouro 🎣'
@@ -364,6 +364,7 @@
       let dados = {
         labels: categorias,
         datasets: [{
+          label:'Porcentagem (%)',
             data: porcentagens,
             borderWidth: 2,
             borderColor: '#2942c0',
@@ -413,7 +414,7 @@
   maintainAspectRatio: true,
   plugins: {
     legend: {
-      display: false
+      display: true
     },
     title: {
       display: true,
