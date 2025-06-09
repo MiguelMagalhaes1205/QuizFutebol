@@ -475,12 +475,12 @@ body {
 
 .card_erro {
   display: none;
-  background-color: #fff;
-  color: black;
+  background-color: #2942c0;
+  color: white;
   width: 230px;
   position: fixed;
-  border-radius: 4px;
-  border: #ED145B 3px solid;
+  border-radius: 10px;
+  border: #269e46 3px solid;
   padding: 10px;
   margin-right: 10%;
 }
@@ -531,18 +531,6 @@ input {
 .loading-div img {
   height: 50px;
   width: 50px;
-}
-
-/* SIMULADOR */
-
-.simulador {
-  color: white;
-}
-
-.simulador .container {
-  flex-direction: column;
-  overflow: scroll; 
-  height: var(--tamanho-simulador);
 }
 
 /* QUIZZES */
@@ -737,10 +725,106 @@ input {
   color: #ffffff;
 }
 
-.conteudo-dashboard{
-  height: 500px;
+.conteudo-dashboard {
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 4px solid #269e46;
 }
 
+.football-knowledge {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  margin-top: 30px;
+}
+
+.grafico-conhecimento {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parametros {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 30%;
+  background-color: white;
+  padding: 10px;
+}
+
+.parametros .titulo-legenda {
+  font-weight: 600;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+.parametros-conhecimento {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.item-regua {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.item-regua p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.item-regua p:nth-child(2) {
+  font-weight: 800;
+}
+
+.bagre {
+  background-color: red;
+}
+
+.melhorar {
+  background-color: orangered;
+}
+
+.media {
+  background-color: yellow;
+}
+
+.acima-media {
+  background-color: yellowgreen;
+}
+
+.deus-do-futebol {
+  background-color: green;
+}
+
+.conteudo-dashboard2{
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.grafico-radar{
+  height: 100%;
+  margin-top: 50px;
+}
 
 /* ALERTA */
 
